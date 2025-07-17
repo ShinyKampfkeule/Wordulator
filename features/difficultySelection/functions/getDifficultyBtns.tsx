@@ -1,14 +1,13 @@
 import { LevelDataInterface } from "@/interfaces/levelDataInterface";
 import { DifficultyBtn } from "../components/difficultyBtn";
+import { Difficulty } from "@/types/difficulty";
 
 export const getDifficultyBtns = (levelData: LevelDataInterface) => {
-  const difficultyBtns = Object.keys(levelData.levelValue).map((difficulty) => {
-    if (difficulty === "result") return null;
-
+  const difficultyBtns = Object.keys(levelData.levelValue.difficulties).map((difficulty) => {
     return (
       <DifficultyBtn
         key={difficulty}
-        difficulty={difficulty}
+        difficulty={difficulty as Difficulty}
         levelData={levelData}
       />
     );

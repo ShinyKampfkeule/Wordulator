@@ -20,11 +20,11 @@ const DIFFICULTY_COLORS = {
 export const LevelIcon = ({ previousLevelSolved, levelValue, difficulty, index }: Props) => {
   const isFirstDiffficulty = index === 0;
   const previousDifficulty = difficulties[index - 1];
-  const previousDifficultySolved = isFirstDiffficulty ? true : levelValue[previousDifficulty].solved;
+  const previousDifficultySolved = isFirstDiffficulty ? true : levelValue.difficulties[previousDifficulty].solved;
 
   if (!previousLevelSolved) return <Lock />;
 
-  if (previousDifficultySolved) return <Trophy style={{ color: levelValue[difficulty].solved ? DIFFICULTY_COLORS[difficulty] : "#0A0A23" }} />;
+  if (previousDifficultySolved) return <Trophy style={{ color: levelValue.difficulties[difficulty].solved ? DIFFICULTY_COLORS[difficulty] : "#0A0A23" }} />;
 
   return <Lock />;
 };

@@ -8,7 +8,7 @@ export const createLevelEntries = (setLevelData: Dispatch<SetStateAction<LevelDa
   let previousLevel: null | LevelInterface = null;
   const levelEntries: JSX.Element[] = [];
 
-  Object.entries(levels).map(([levelName, levelValue], index) => {
+  Object.entries(levels).forEach(([levelName, levelValue], index) => {
     levelEntries.push(
       <LevelEntry
         key={levelName}

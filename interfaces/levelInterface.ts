@@ -1,10 +1,6 @@
-import { DifficultyInterface } from "./difficultyInterface";
+import { DifficultiesInterface } from "./difficultiesInterface";
 
 export interface LevelInterface {
   result: number;
-  beginner: DifficultyInterface;
-  easy: DifficultyInterface;
-  medium: DifficultyInterface;
-  hard: DifficultyInterface;
-  impossible: DifficultyInterface;
+  difficulties: DifficultiesInterface;
 }

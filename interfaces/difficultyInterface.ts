@@ -1,9 +1,7 @@
+import { DifficultyStatisticsInterface } from "./difficultyStatisticsInterface";
 import { SymbolCountInterface } from "./symbolCountInterface";
 
-export interface DifficultyInterface {
+export interface DifficultyInterface extends DifficultyStatisticsInterface {
   solution: string;
   symbolCount: SymbolCountInterface;
-  solved: boolean;
-  time: number;
-  tips: number;
 }

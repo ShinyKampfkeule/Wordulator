@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function LevelSelect() {
   const [levelData, setLevelData] = useState<null | LevelDataInterface>(null);
+
   return (
     <div className="w-screen h-screen relative">
       <LevelSelection setLevelData={setLevelData} />

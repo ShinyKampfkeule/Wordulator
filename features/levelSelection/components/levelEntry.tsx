@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const LevelEntry = ({ levelName, levelValue, index, previousLevel, setLevelData }: Props) => {
-  const previousLevelSolved = previousLevel ? previousLevel.beginner.solved : true;
+  const previousLevelSolved = previousLevel ? previousLevel.difficulties.beginner.solved : true;
   return (
     <Button
       variant="secondary"

@@ -18,7 +18,7 @@ export const getCalculatorKeys = (
   setShowCompletedPopup: Dispatch<SetStateAction<boolean>>
 ) => {
   const calculatorKeys: CalculatorKeyType[] = [".", "0", "delete", "=", "?", "1", "2", "3", "+", "-", "4", "5", "6", "*", "/", "7", "8", "9", "(", ")"];
-  const available_chars = Object.keys(currentLevel.levelData?.levelValue[currentLevel.levelDifficulty!].symbolCount!);
+  const available_chars = Object.keys(currentLevel.levelData?.levelValue.difficulties[currentLevel.levelDifficulty!].symbolCount!);
 
   return calculatorKeys.map((calculatorKey) => {
     let config = KEY_CONFIG[calculatorKey] || { variant: "calculator_active" };
@@ -28,6 +28,7 @@ export const getCalculatorKeys = (
 
     return (
       <CalculatorKey
+        key={calculatorKey}
         calculatorKey={calculatorKey}
         btn_variant={btn_variant}
         btn_disabled={btn_disabled}

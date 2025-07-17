@@ -14,7 +14,7 @@ export const KEY_BEHAVIOR: Record<
     console.log("Got a Tip");
   },
   "=": (playerSolution, currentLevel, setShowCompletedPopup, setPlayerSolution) => {
-    if (playerSolution === currentLevel.levelData?.levelValue.beginner.solution) {
+    if (playerSolution === currentLevel.levelData?.levelValue.difficulties[currentLevel.levelDifficulty!].solution) {
       setShowCompletedPopup(true);
     }
   },
